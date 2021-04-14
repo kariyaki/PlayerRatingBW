@@ -1,0 +1,12 @@
+name: PlayerRatingBW
+version: 1.0
+main: io.github.kariyaki.playerratingbw.PlayerRatingBW
+api-version: 1.16
+
+description: This plugin create bedwars ranks and post the ranks to discord
+author: Kariyaki
+
+commands:
+  rating:
+    description: Show the bedwars rating
+    usage: /rating <name>

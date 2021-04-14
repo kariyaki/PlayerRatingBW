@@ -1,0 +1,14 @@
+# MySql setup
+url: jdbc:mysql://127.0.0.1:3306/BW_Local
+user: root
+password: password
+
+# Positive rating calculations (how much will be added)
+bedsDestroyed: 0
+finalKills: 0
+kills: 0
+wins: 1.0
+
+# Negative rating calculations (how much will be substracted)
+deaths: 0
+loses: 1.0
