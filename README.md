@@ -1,4 +1,4 @@
-# PlayerStatsBW
+# PlayerRatingBW
 
 ## Setup local Bedwars server
 1. Make sure you have mysql pre-installed on your pc, with an empty database.
