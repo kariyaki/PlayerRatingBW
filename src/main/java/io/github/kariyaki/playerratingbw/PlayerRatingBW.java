@@ -1,5 +1,11 @@
 package io.github.kariyaki.playerratingbw;
 
+import github.scarsz.discordsrv.DiscordSRV;
+import io.github.kariyaki.playerratingbw.command.discord.DiscordSRVListener;
+import io.github.kariyaki.playerratingbw.command.minecraft.CommandRating;
+import io.github.kariyaki.playerratingbw.placeholder.PlayerRatingExpansion;
+import io.github.kariyaki.playerratingbw.utils.DatabaseConnection;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -9,6 +15,7 @@ public class PlayerRatingBW extends JavaPlugin {
 
     private final Logger logger = getLogger();
     private final FileConfiguration config = getConfig();
+    private final DiscordSRVListener discordsrvListener = new DiscordSRVListener(this);
 
     @Override
     public void onEnable() {
@@ -17,6 +24,9 @@ public class PlayerRatingBW extends JavaPlugin {
         saveDefaultConfig();
         DatabaseConnection.setupConnection();
         setupCommand();
+        DiscordSRV.api.subscribe(discordsrvListener);
+    }
+
     }
 
     private void setupCommand() {
@@ -31,6 +41,7 @@ public class PlayerRatingBW extends JavaPlugin {
         logger.info("onDisable is called");
         super.onDisable();
         DatabaseConnection.closeConnection();
+        DiscordSRV.api.unsubscribe(discordsrvListener);
     }
 
     public static PlayerRatingBW getPlugin() {

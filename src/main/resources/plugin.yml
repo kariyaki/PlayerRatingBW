@@ -5,7 +5,10 @@ api-version: 1.16
 
 description: This plugin create bedwars ranks and post the ranks to discord
 author: Kariyaki
-
+depend:
+  - DiscordSRV
+  - PlaceholderAPI
+  - MBedwars
 commands:
   rating:
     description: Show the bedwars rating

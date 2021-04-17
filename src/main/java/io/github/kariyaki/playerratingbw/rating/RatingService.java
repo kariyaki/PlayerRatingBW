@@ -1,5 +1,8 @@
-package io.github.kariyaki.playerratingbw;
+package io.github.kariyaki.playerratingbw.rating;
 
+import io.github.kariyaki.playerratingbw.PlayerRatingBW;
+import io.github.kariyaki.playerratingbw.models.PlayerStats;
+import io.github.kariyaki.playerratingbw.utils.DatabaseConnection;
 import org.bukkit.Bukkit;
 
 import java.sql.ResultSet;
@@ -10,9 +13,7 @@ public class RatingService {
 
     private final Map<String, PlayerStats> allPlayerStats = new HashMap<>();
 
-    public RatingService() {
-        getAndCalculateRatings();
-    }
+    public RatingService() { }
 
     private void getAndCalculateRatings() {
         try {

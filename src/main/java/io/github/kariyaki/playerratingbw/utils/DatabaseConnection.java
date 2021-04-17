@@ -1,4 +1,6 @@
-package io.github.kariyaki.playerratingbw;
+package io.github.kariyaki.playerratingbw.utils;
+
+import io.github.kariyaki.playerratingbw.PlayerRatingBW;
 
 import java.sql.*;
 

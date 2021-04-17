@@ -1,5 +1,6 @@
-package io.github.kariyaki.playerratingbw;
+package io.github.kariyaki.playerratingbw.command.minecraft;
 
+import io.github.kariyaki.playerratingbw.rating.RatingService;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

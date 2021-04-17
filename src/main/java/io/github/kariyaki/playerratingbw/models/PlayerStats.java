@@ -1,4 +1,4 @@
-package io.github.kariyaki.playerratingbw;
+package io.github.kariyaki.playerratingbw.models;
 
 public class PlayerStats {
     private String playerUuid;
